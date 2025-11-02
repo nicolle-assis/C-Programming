@@ -1,0 +1,34 @@
+/*Problema 1
+Escreva um programa que leia um número inteiro e apresente seu ante-
+cessor e seu sucessor.*/
+
+#include <stdio.h>
+#include <locale.h>
+#include <windows.h>
+#include <stdlib.h>
+int main()
+{
+    UINT CPAGE_UTF8 = 65001;
+    UINT CPAGE_DEFAULT = GetConsoleOutputCP();
+    SetConsoleOutputCP(CPAGE_UTF8);
+
+    /*declaracao de variaveis*/
+    int n, ant, suc;
+    system("cls");
+
+    /*entrada de dados*/
+    printf("Digite um número: ");
+    scanf("%i", &n);
+    printf("===================");
+    /*calculo*/
+    ant = n - 1;
+    suc = n + 1;
+
+    /*saida de dados*/
+    printf("\nAntecessor do número %i: %i", n, ant);
+    printf("\nSucessor do número %i: %i", n, suc);
+
+
+    SetConsoleOutputCP(CPAGE_DEFAULT);
+    return 0;
+}
