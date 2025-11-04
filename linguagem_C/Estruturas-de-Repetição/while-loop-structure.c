@@ -16,7 +16,8 @@ int main()
     i=0;
     while(i!=10)
     {
-        printf("\n %d - %s", i, name); i++;
+        printf("\n %d - %s", i, name); 
+        i++;
     }
 
     return 0;
