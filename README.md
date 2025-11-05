@@ -1,5 +1,4 @@
 # 💻 C Programming — Learning Journey  
-*(English below 🇬🇧)*  
 
 Bem-vindo(a) ao meu repositório de estudos em **Linguagem C**!  
 Aqui registro toda a minha evolução — desde os **conceitos básicos** até **estruturas de repetição e projetos práticos**.  
