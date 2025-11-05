@@ -33,7 +33,7 @@ Este repositório faz parte da minha jornada de aprendizado em **Tecnologia da I
 
 ---
 
-##✨ Autor
+## ✨ Autora
 
 Feito por Nicolle de Assis
 🎓 Estudante de Análise e Desenvolvimento de Sistemas
