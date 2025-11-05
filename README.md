@@ -36,8 +36,8 @@ Este repositório faz parte da minha jornada de aprendizado em **Tecnologia da I
 ## ✨ Autora
 
 Feito por Nicolle de Assis
-🎓 Estudante de Análise e Desenvolvimento de Sistemas
-📚 Foco em aprendizado técnico e desenvolvimento em C / Backend
+-🎓 Estudante de Análise e Desenvolvimento de Sistemas
+-📚 Foco em aprendizado técnico e desenvolvimento em C / Backend
 
-🔗 GitHub: nicolle-assis
-💼 LinkedIn: linkedin.com/in/nicolledeassis2005
+-🔗 GitHub: nicolle-assis
+-💼 LinkedIn: linkedin.com/in/nicolledeassis2005
