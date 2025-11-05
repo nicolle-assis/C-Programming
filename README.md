@@ -12,11 +12,8 @@ Este repositório faz parte da minha jornada de aprendizado em **Tecnologia da I
 | Pasta | Descrição |
 |--------|------------|
   | **01-conceitos-iniciais-em-C** | Introdução à linguagem C: tipos de dados, variáveis, entrada e saída. |
-  |--------------------------------------------------------------------------------------------------------|
   | **02-estrutura_condicional-C** | Programas com uso de estruturas condicionais (`if`, `else`, `switch`). |
-  |---------------------------------------------------------------------------------------------------------|
   | **03-Estruturas-de-Repetição** | Laços e repetições: `for`, `while`, `do-while`. |
-  |----------------------------------------------------------------------------------|
   | **projetos-em-C** | Pequenos projetos práticos aplicando o conteúdo aprendido. |
   
 ---
