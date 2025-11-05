@@ -9,94 +9,67 @@ int main()
     UINT CPAGE_DEFAULT = GetConsoleOutputCP();
     SetConsoleOutputCP(CPAGE_UTF8);
 
-    /*variables*/
-    int codeCountry, codeWeigth;
-    float cargoWeigth, cargoK, Fprice, Tvalue, Tax;
+    int option;
+    float salary, newSalary;
     system("cls");
-
-    //data input
-    //tabela de imposto
-    printf("\nTabela de Imposto por Estado");
-    printf("\n------------------------------");
-    printf("\n[1] - 20%%");
-    printf("\n[2] - 15%%");
-    printf("\n[3] - 10%%");
-    printf("\n[4] - 5%%");
-    printf("\nInforme o código: ");
-    scanf("%d", &codeCountry);
-
-    //peso da carga
-    printf("\nInforme o peso da carga em toneladas: ");
-    scanf("%f", &cargoWeigth);
-
-    //tabela de preco por quilo
-    printf("\nTabela de preço por quilo (código da carga):");
-    printf("\n[1] - 10 a 20 = 180");
-    printf("\n[2] - 21 a 30 = 120");
-    printf("\n[3] - 31 a 40 = 230");
-    printf("\nInforme o código: ");
-    scanf("%d", &codeWeigth);
-
-    //calculations
     
-    //calculo da carga
-    cargoK = cargoWeigth * 1000;
+    printf("\n\tTABELA DE CARGOS");
+    printf("\n-----------------------------------");
+    printf("\n[1] - Servente 40%%");
+    printf("\n[2] - Pedreiro 35%%");
+    printf("\n[3] - Mestre de Obras 20%%");
+    printf("\n[4] - Técnico de Segurança 10%%");
+    printf("\nConsultar código: ");
+    scanf("%d", &option);
 
-    //calculo do preco por quilo
-    if((codeWeigth>=10)&&(codeWeigth<=20))
-    {
-        Fprice = cargoK * 180;
-    }
-    else if((codeWeigth>=21)&&(codeWeigth<=30))
-    {
-        Fprice = cargoK * 120;
-    }
-    else if((codeWeigth>=31)&&(codeWeigth<=40))
-    {
-        Fprice = cargoK * 230;
-    }
-    else 
-    {
-    printf("\nerror!código inválido!");
-    }
-
-    //calculo do imposto
-    switch (codeCountry){
+    switch (option){
         case 1:
         {
-            Tax = Fprice * 0.20;
+            printf("\nSalário atual: R$");
+            scanf("%f", &salary);
+
+            newSalary = salary * 1.4;
+
+            printf("Novo salário: R$ %.2f", newSalary);
+            
             break;
         }
         case 2:
-        {   
-            Tax = Fprice * 0.15;
+        {
+            printf("\nSalário atual: R$");
+            scanf("%f", &salary);
+            
+            newSalary = salary * 1.35;
+
+            printf("Novo salário: R$ %.2f", newSalary);
             break;
         }
         case 3:
-        {   
-            Tax = Fprice * 0.10;
+        {
+            printf("\nSalário atual: R$");
+            scanf("%f", &salary);
+
+            newSalary = salary * 1.2;
+
+            printf("Novo salário: R$ %.2f", newSalary);
             break;
         }
-        case 4: 
-        {   
-            Tax = Fprice * 0.05;
+        case 4:
+        {
+            printf("\nSalário atual: R$");
+            scanf("%f", &salary);
+
+            newSalary = salary * 1.1;
+
+            printf("Novo salário: R$ %.2f", newSalary);
             break;
         }
         default:
         {
-            printf("\nerror!código inválido");
+            printf("error!código inválido!");
+            break;
         }
     }
-
-    //preco total
-    Tvalue = Fprice + Tax;
-
-    //data output
-    printf("\nPeso em quilos: %.2f", cargoK);
-    printf("\nPreço da carga: R$%.2f",Fprice);
-    printf("\nValor do Imposto: R$%.2f", Tax);
-    printf("\nValor Total: R$%.2f", Tvalue);
-
     SetConsoleOutputCP(CPAGE_DEFAULT);
     return 0;
 }

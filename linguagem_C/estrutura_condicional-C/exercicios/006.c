@@ -1,69 +1,75 @@
 #include <stdio.h>
-#include <locale.h>
-#include <windows.h>
-#include <stdio.h>
+#include <stdlib.h>
 
 int main()
 {
-    UINT CPAGE_UTF8 = 65001;
-    UINT CPAGE_DEFAULT = GetConsoleOutputCP();
-    SetConsoleOutputCP(CPAGE_UTF8); 
+    int op;
+    float tt;
 
-    int num1, num2, num3, num4, num5, greater, smaller;
+    tt = 0;
+    printf("\n  Cardapio");
+    printf("\n============");
+    printf("\n  Prato");
+    printf("\n[1] Italiano - 750cal \n[2] Japones - 324cal \n[3] Salvadorenho - 545cal \n[4] Sem prato \n[5] Sair");
+    printf("\nEscolha uma opcao: ");
+    scanf("%i", &op);
+
+    switch (op){
+        case 1:
+            tt = tt + 750;
+        break;
+        case 2:
+            tt = tt + 324;
+        break;
+        case 3:
+            tt = tt + 545;
+        break;
+        case 4:
+            printf("Proximo!");
+        break;
+        case 5:
+            printf("Obrigado pela atencao!");
+            exit(EXIT_SUCCESS);
+        break;
+        default:
+            printf("erro!opcao invalida");
+            exit(EXIT_SUCCESS);
+        break;
+    }
     system("cls");
 
-    greater = num1;
-    smaller = num1;
+    printf("\n  Cardapio");
+    printf("\n============");
+    printf("\n  Bebida");
+    printf("\n[1] Cha - 30cal \n[2] Suco de Laranja - 80cal \n[3] Refrigerante - 90cal \n[4] Sem bebida \n[5] Sair");
+    printf("\nEscolha uma opcao: ");
+    scanf("%i", &op);
 
-    printf("Informe o 1º número: ");
-    scanf("%i", &num1);
-    printf("Informe o 2º número: ");
-    scanf("%i", &num2);
-    printf("Informe o 3º número: ");
-    scanf("%i", &num3);
-    printf("Informe o 4º número: ");
-    scanf("%i", &num4);
-    printf("Informe o 5º número: ");
-    scanf("%i", &num5);
+    switch (op){
+        case 1:
+            tt = tt + 30;
+        break;
+        case 2:
+            tt = tt + 80;
+        break;
+        case 3:
+            tt = tt + 90;
+        break;
+        case 4:
+            tt = tt;
 
-    //condicao maior
-    if (num2>greater)
-    {
-        greater = num2;
+        break;  
+        case 5:
+            printf("Obrigado pela atencao!");
+            exit(EXIT_SUCCESS);
+        break;
+        default:
+            printf("error!opcao invalida");
+            exit(EXIT_SUCCESS);
+        break;
     }
-    if(num3>greater)
-    {
-        greater = num3;
-    }
-    if(num4>greater)
-    {
-        greater = num4;
-    }
-    if(num5>greater)
-    {
-        greater = num5;
-    }
-    //condicao menor
-    if(num2<smaller)
-    {
-        smaller = num2;
-    }
-    if(num3<smaller)
-    {
-        smaller = num3;
-    }
-    if(num4<smaller)
-    {
-        smaller = num4;
-    }
-    if(num5<smaller)
-    {
-        smaller = num5;
-    }
+    printf("O total de calorias e: %.2f \n", tt);
+    printf("Obrigado pela atencao!");
 
-    printf("\nO maior número é: %d", greater);
-    printf("\nO menor número é: %d", smaller);
-
-    SetConsoleOutputCP(CPAGE_DEFAULT);
     return 0;
 }

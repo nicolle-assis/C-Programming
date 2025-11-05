@@ -9,67 +9,83 @@ int main()
     UINT CPAGE_DEFAULT = GetConsoleOutputCP();
     SetConsoleOutputCP(CPAGE_UTF8);
 
-    int option;
-    float salary, newSalary;
+    int month;
     system("cls");
-    
-    printf("\n\tTABELA DE CARGOS");
-    printf("\n-----------------------------------");
-    printf("\n[1] - Servente 40%%");
-    printf("\n[2] - Pedreiro 35%%");
-    printf("\n[3] - Mestre de Obras 20%%");
-    printf("\n[4] - Técnico de Segurança 10%%");
-    printf("\nConsultar código: ");
-    scanf("%d", &option);
 
-    switch (option){
-        case 1:
+    printf("\nInforme um número e descubra qual é o mês: ");
+    scanf("%d", &month);
+
+    if(month==1)
+    {
+        printf("Mês: Janeiro");
+    }
+    else{
+        if(month==2)
         {
-            printf("\nSalário atual: R$");
-            scanf("%f", &salary);
-
-            newSalary = salary * 1.4;
-
-            printf("Novo salário: R$ %.2f", newSalary);
-            
-            break;
+          printf("Mês: Fevereiro");  
         }
-        case 2:
-        {
-            printf("\nSalário atual: R$");
-            scanf("%f", &salary);
-            
-            newSalary = salary * 1.35;
-
-            printf("Novo salário: R$ %.2f", newSalary);
-            break;
-        }
-        case 3:
-        {
-            printf("\nSalário atual: R$");
-            scanf("%f", &salary);
-
-            newSalary = salary * 1.2;
-
-            printf("Novo salário: R$ %.2f", newSalary);
-            break;
-        }
-        case 4:
-        {
-            printf("\nSalário atual: R$");
-            scanf("%f", &salary);
-
-            newSalary = salary * 1.1;
-
-            printf("Novo salário: R$ %.2f", newSalary);
-            break;
-        }
-        default:
-        {
-            printf("error!código inválido!");
-            break;
+        else{
+            if(month==3)
+            {
+                printf("Mês: Março");
+            }
+            else{
+                if(month==4)
+                {
+	                printf("Mês: Abril");
+                }
+                else{
+                    if(month==5)
+                    {
+                        printf("Mês: Maio");
+                    }
+                    else{
+                        if(month==6)
+                        {
+                            printf("Mês: Junho");
+                        }
+                        else{
+                            if(month==7 )
+                            {
+                                printf("Mês: Julho");
+                            }
+                            else{
+                                if(month==8)
+                                {
+                                    printf("Mês: Agosto");
+                                }
+                                else{
+                                    if(month==9)
+                                    {
+                                       printf("Mês: Setembro"); 
+                                    }
+                                    else{
+                                        if(month==10)
+                                        {
+                                            printf("Mês: Outubro");
+                                        }
+                                        else{
+                                            if(month==11)
+                                            {
+                                                printf("Mês: Novembro");
+                                            }
+                                            else{
+                                                if(month==12)
+                                                {
+                                                    printf("Mês: Dezembro");
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
+
     SetConsoleOutputCP(CPAGE_DEFAULT);
     return 0;
 }

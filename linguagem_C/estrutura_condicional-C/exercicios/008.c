@@ -9,82 +9,28 @@ int main()
     UINT CPAGE_DEFAULT = GetConsoleOutputCP();
     SetConsoleOutputCP(CPAGE_UTF8);
 
-    int month;
+    int num;
     system("cls");
 
-    printf("\nInforme um número e descubra qual é o mês: ");
-    scanf("%d", &month);
+    printf("Informe um número: ");
+    scanf("%d", &num);
 
-    if(month==1)
+    if(num%3==0)
     {
-        printf("Mês: Janeiro");
+        printf("\n%d é divisível por 3.", num);
     }
     else{
-        if(month==2)
-        {
-          printf("Mês: Fevereiro");  
-        }
-        else{
-            if(month==3)
-            {
-                printf("Mês: Março");
-            }
-            else{
-                if(month==4)
-                {
-	                printf("Mês: Abril");
-                }
-                else{
-                    if(month==5)
-                    {
-                        printf("Mês: Maio");
-                    }
-                    else{
-                        if(month==6)
-                        {
-                            printf("Mês: Junho");
-                        }
-                        else{
-                            if(month==7 )
-                            {
-                                printf("Mês: Julho");
-                            }
-                            else{
-                                if(month==8)
-                                {
-                                    printf("Mês: Agosto");
-                                }
-                                else{
-                                    if(month==9)
-                                    {
-                                       printf("Mês: Setembro"); 
-                                    }
-                                    else{
-                                        if(month==10)
-                                        {
-                                            printf("Mês: Outubro");
-                                        }
-                                        else{
-                                            if(month==11)
-                                            {
-                                                printf("Mês: Novembro");
-                                            }
-                                            else{
-                                                if(month==12)
-                                                {
-                                                    printf("Mês: Dezembro");
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
+        printf("\n%d não é divisível por 3.", num);
     }
+
+    if(num%7==0)
+    {
+        printf("\n%d é divisível por 7.", num);
+    }else{
+        printf("\n%d não é divisível por 7.", num);
+    }
+
+
 
     SetConsoleOutputCP(CPAGE_DEFAULT);
     return 0;
