@@ -31,11 +31,3 @@ Este repositório faz parte da minha jornada de aprendizado em **Tecnologia da I
 - Praticar lógica de programação e estrutura de código.  
 - Aprender boas práticas e padronização de escrita em C.  
 
----
-
-## ✨ Autora
-**Feito por Nicolle de Assis**
-🎓 Estudante de Análise e Desenvolvimento de Sistemas
-📚 Foco em aprendizado técnico e desenvolvimento em C / Backend
-🔗 GitHub: [nicolle-assis](https://github.com/nicolle-assis)
-💼 LinkedIn: [linkedin.com/in/nicolledeassis2005](https://linkedin.com/in/nicolledeassis2005)
