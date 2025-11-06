@@ -1,6 +1,4 @@
-/*Problema 2
-Elabore um programa que receba quatro notas e calcule a média aritmética entre elas*/
-
+//Average-of-Grades
 #include <stdio.h>
 #include <locale.h>
 #include <windows.h>
@@ -11,11 +9,11 @@ int main()
     UINT CPAGE_DEFAULT = GetConsoleOutputCP();
     SetConsoleOutputCP(CPAGE_UTF8);
 
-    /*declaracao de variaveis*/
-    float n1, n2, n3, n4, m;
+    //variables
+    float n1, n2, n3, n4, average;
     system("cls");
 
-    /*entrada de dados*/
+    //data input
     printf("\tMÉDIA DE NOTAS");
     printf("\n------------------------------");
     printf("\nDigite a primeira nota: ");
@@ -27,13 +25,12 @@ int main()
     printf("Digite a quarta nota: ");
     scanf("%f", &n4);
 
-    
-    /*calculo*/
-    m = (n1+n2+n3+n4) /4;
+    //calculation    
+    average = (n1+n2+n3+n4) /4;
 
-    /*saida de dados*/
+    //data output
     printf("\n--------------------------------");
-    printf("\nA média de notas foi: %.1f", m);
+    printf("\nA média de notas foi: %.1f", average);
 
     SetConsoleOutputCP(CPAGE_DEFAULT);
     return 0;
