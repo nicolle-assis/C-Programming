@@ -1,3 +1,4 @@
+//Insurance-Plan-Cost
 #include <stdio.h>
 #include <windows.h>
 #include <locale.h>
@@ -9,39 +10,39 @@ int main()
     UINT CPAGE_DEFAULT = GetConsoleOutputCP();
     SetConsoleOutputCP(CPAGE_UTF8);
 
-    int id;
-    char nome [30];   
+    int age;
+    char name [30];   
     system("cls");
 
     printf("\tCADASTRO DE PLANO");
     printf("\n--------------------------------");
     printf("\nInforme o nome: ");
-    scanf("%s", nome);
+    scanf("%s", name);
     printf("Informe a idade: ");
-    scanf("%i", &id);
+    scanf("%i", &age);
     printf("----------------------------------");
     printf("\n\tValor do Plano");
-    if(id<=18)
+    if(age<=18)
     {
         printf("\nSeu plano ira custar: R$ 50,00");
     }
     else{
-        if((id>=19) && (id<=29))
+        if((age>=19) && (age<=29))
         {
             printf("\nSeu plano ira custar: R$ 70,00");
         }
         else{
-            if((id>=30) && (id<=45))
+            if((age>=30) && (age<=45))
             {
                 printf("\nSeu plano ira custar: R$ 90,00");
             }
             else{
-                if((id>=46) && (id<=65))
+                if((age>=46) && (age<=65))
                 {
                     printf("\nSeu plano ira custar: R$ 130,00");
                 }
                 else{
-                    if(id>65)
+                    if(age>65)
                     {
                         printf("\nSeu plano ira custar: R$ 170,00");
                     }
