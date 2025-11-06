@@ -10,10 +10,10 @@ Este repositório faz parte da minha jornada de aprendizado em **Tecnologia da I
 
 | Pasta | Descrição |
 |--------|------------|
-  | **01-conceitos-iniciais-em-C** | Introdução à linguagem C: tipos de dados, variáveis, entrada e saída. |
-  | **02-estrutura_condicional-C** | Programas com uso de estruturas condicionais (`if`, `else`, `switch`). |
-  | **03-Estruturas-de-Repetição** | Laços e repetições: `for`, `while`, `do-while`. |
-  | **projetos-em-C** | Pequenos projetos práticos aplicando o conteúdo aprendido. |
+  | **[01-conceitos-iniciais-em-C](https://github.com/nicolle-assis/C-Programming/tree/main/01-conceitos-iniciais-em-C)** | Introdução à linguagem C: tipos de dados, variáveis, entrada e saída. |
+  | **[02-estrutura_condicional-C](https://github.com/nicolle-assis/C-Programming/tree/main/02-estrutura_condicional-C)** | Programas com uso de estruturas condicionais (`if`, `else`, `switch`). |
+  | **[03-Estruturas-de-Repetição](https://github.com/nicolle-assis/C-Programming/tree/main/03-Estruturas-de-Repeti%C3%A7%C3%A3o)** | Laços e repetições: `for`, `while`, `do-while`. |
+  | **[projetos-em-C](https://github.com/nicolle-assis/C-Programming/tree/main/projetos-em-C)** | Pequenos projetos práticos aplicando o conteúdo aprendido. |
   
 ---
 
