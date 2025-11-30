@@ -1,70 +1,74 @@
-# Projetos em C / C Projects
+# 📂 **Projetos em C — C Projects**
 
-**PT-BR:**
-Este repositório reúne uma coleção de projetos que desenvolvi em linguagem C.
-Criei cada um deles para treinar e aprimorar minha lógica de programação, entender melhor a estrutura da linguagem C e praticar conceitos essenciais como entrada e saída de dados, condicionais, loops e operações matemáticas.
+Coleção de pequenos programas desenvolvidos durante meus estudos iniciais de lógica de programação e linguagem C.
+Cada projeto aborda estruturas básicas como entrada e saída, condicionais, operações matemáticas e manipulação de vetores e strings.
 
-**EN:**
-This repository gathers a collection of C language projects that I developed.
-I created each one to train and improve my programming logic, better understand the structure of the C language, and practice essential concepts such as input/output, conditionals, loops, and mathematical operations.
+Collection of small programs developed during my early studies of programming logic and the C language.
+Each project covers fundamental structures such as input/output, conditionals, math operations, and array/string manipulation.
 
 ---
 
-## 📌 Lista de Projetos / Projects List
+## 🧮 **1. Basic Calculator Program — Calculadora Básica**
+
+**Descrição (PT):**
+Programa que realiza operações matemáticas simples (adição, subtração, multiplicação e divisão) com base na escolha do usuário. Inclui validação para evitar divisão por zero.
+
+**Description (EN):**
+Program that performs basic math operations (addition, subtraction, multiplication, and division) based on user selection. Includes validation to avoid division by zero.
+
+**Conceitos usados / Concepts used:**
+
+* `switch`
+* Entrada de dados
+* Operações matemáticas
+* Tratamento simples de erros
 
 ---
 
-### 1. **Conceitos Iniciais / Initial Concepts**
+## 💼 **2. Salary Adjustment Program — Programa de Reajuste Salarial**
 
-**PT-BR:**
-Nesta seção estão os meus primeiros projetos em C.
-Aqui eu pratico variáveis, tipos de dados, operadores, entrada e saída, e a estrutura básica de um programa.
+**Descrição (PT):**
+Lê o código de um cargo, recebe o salário atual e calcula o novo salário conforme a porcentagem de aumento associada ao cargo.
 
-**EN:**
-This section contains my first C projects.
-Here I practice variables, data types, operators, input/output, and the basic structure of a C program.
+**Description (EN):**
+Reads a job code, receives the current salary, and calculates the new salary based on the percentage increase associated with the role.
 
-🔗 [Projetos / Projects](https://github.com/nicolle-assis/C-Programming/tree/main/01-conceitos-iniciais-em-C/projects)
+**Conceitos usados / Concepts used:**
 
----
-
-### 2. **Estrutura Condicional / Conditional Structure**
-
-**PT-BR:**
-Neste grupo de projetos, eu utilizo estruturas de decisão como **if, else, else if e switch-case**.
-Eles me ajudam a entender como o programa toma decisões com base em condições e comparações.
-
-**EN:**
-In this group of projects, I use decision-making structures such as **if, else, else if, and switch-case**.
-They help me understand how a program makes decisions based on conditions and comparisons.
-
-🔗 [Projetos / Projects](https://github.com/nicolle-assis/C-Programming/tree/main/02-estrutura_condicional-C/projects)
+* Estruturas condicionais (`if/else`)
+* Cálculo percentual
+* Uso de tabela de códigos
 
 ---
 
-### 3. **Estrutura de Repetição / Loop Structure**
+## 🚚 **3. Cargo Price and Tax Calculator — Calculadora de Preço e Imposto de Carga**
 
-**PT-BR:**
-Aqui estão os projetos que desenvolvi para praticar loops (**for, while, do-while**).
-Incluí exercícios com contadores, tabuadas, repetições de cálculos e outras tarefas que exigem execução contínua até que uma condição seja atendida.
+**Descrição (PT):**
+Recebe o peso da carga e códigos referentes ao estado e categoria. Calcula preço por quilo, imposto e valor total. Inclui tratamento para códigos inválidos.
 
-**EN:**
-Here are the projects I developed to practice loops (**for, while, do-while**).
-I included exercises with counters, multiplication tables, repeated calculations, and other tasks that require continuous execution until a condition is met.
+**Description (EN):**
+Receives the cargo weight and codes related to the state and category. Calculates price per kilo, tax amount, and final value. Includes handling of invalid codes.
 
-🔗 [Projetos / Projects](https://github.com/nicolle-assis/C-Programming/tree/main/03-Estruturas-de-Repeti%C3%A7%C3%A3o/projects)
+**Conceitos usados / Concepts used:**
+
+* `switch` e `if/else`
+* Conversão de toneladas para quilos
+* Cálculo de imposto
+* Validações de entrada
 
 ---
 
-## 👩‍💻 Sobre / About
+## 🔍 **4. Vector Word Search — Busca de Palavras em Vetor**
 
-**PT-BR:**
-Meu nome é **Nicolle De Assis** e sou estudante de Análise e Desenvolvimento de Sistemas.
-Criei este repositório para acompanhar minha evolução na linguagem C e compartilhar meus estudos.
+**Descrição (PT):**
+Recebe 10 palavras e permite buscar uma delas usando comparação de strings. Retorna a posição onde a palavra foi encontrada ou uma mensagem caso não exista.
 
-**EN:**
-My name is **Nicolle De Assis**, and I am a Systems Analysis and Development student.
-I created this repository to track my progress in the C language and share my learning journey.
+**Description (EN):**
+Receives 10 words and allows the user to search for one of them using string comparison. Returns the position where the word was found or a message if it does not exist.
 
-🔗 GitHub: [nicolle-assis](https://github.com/nicolle-assis)
-💼 LinkedIn: [linkedin.com/in/nicolledeassis2005](https://www.linkedin.com/in/nicolledeassis2005)
+**Conceitos usados / Concepts used:**
+
+* Vetor de strings
+* `strcmp()`
+* Loop com condição de parada
+* Manipulação básica de strings
