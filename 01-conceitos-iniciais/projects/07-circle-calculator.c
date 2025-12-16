@@ -12,9 +12,7 @@
 
 int main()
 {
-    UINT CPAGE_UTF8 = 65001;
-    UINT CPAGE_DEFAULT = GetConsoleOutputCP();
-    SetConsoleOutputCP(CPAGE_UTF8);
+    SetConsoleOutputCP(65001);
 
     /* Variable declaration */
     double radius, area, perimeter;
@@ -34,6 +32,5 @@ int main()
     printf("\nPerímetro de %.2lf = %.2lf", radius, perimeter);
     printf("\n===================\n");
 
-    SetConsoleOutputCP(CPAGE_DEFAULT);
     return 0;
 }

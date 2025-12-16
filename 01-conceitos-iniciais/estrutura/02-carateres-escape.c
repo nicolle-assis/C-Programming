@@ -1,12 +1,11 @@
 #include <stdio.h>
-#include <locale.h>
+#include <stdlib.h>
 #include <windows.h>
 
 int main() 
 {
-    UINT CPAGE_UTF8 = 65001;
-    UINT CPAGE_DEFAULT = GetConsoleOutputCP();
-    SetConsoleOutputCP(CPAGE_UTF8);
+    system("cls");
+    SetConsoleOutputCP(65001);
 
     printf("Demonstração dos caracteres de escape em C:\n\n");
 
@@ -44,6 +43,5 @@ int main()
 
     printf("Fim da demonstração.\n");
 
-    SetConsoleOutputCP(CPAGE_DEFAULT);
     return 0;
 }

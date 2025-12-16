@@ -8,9 +8,7 @@
 
 int main()
 {
-    UINT CPAGE_UTF8 = 65001;
-    UINT CPAGE_DEFAULT = GetConsoleOutputCP();
-    SetConsoleOutputCP(CPAGE_UTF8);
+    SetConsoleOutputCP(65001);
 
     /* Variable declaration */
     int number;
@@ -31,6 +29,5 @@ int main()
     printf("\nRaiz Quadrada de %i = %.1lf", number, squareRoot);
     printf("\n==============================");
 
-    SetConsoleOutputCP(CPAGE_DEFAULT);
     return 0;
 }

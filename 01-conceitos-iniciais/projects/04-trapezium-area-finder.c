@@ -2,14 +2,11 @@
 
 #include <stdio.h>
 #include <windows.h>
-#include <locale.h>
 #include <stdlib.h>
 
 int main()
 {
-    UINT CPAGE_UTF8 = 65001;
-    UINT CPAGE_DEFAULT = GetConsoleOutputCP();
-    SetConsoleOutputCP(CPAGE_UTF8);
+    SetConsoleOutputCP(65001);
 
     //Variables 
     float area, baseLarge, baseSmall, height;
@@ -32,6 +29,5 @@ int main()
     printf("\nAltura: h = %.1f cm", height);
     printf("\nÁrea do trapézio: %.1f cm²", area);
 
-    SetConsoleOutputCP(CPAGE_DEFAULT);
     return 0;
 }

@@ -1,25 +1,28 @@
-/* Calorie Counter Program
-   Calculates the total calories based on the user's choices of main dish and drink. */
+/* Programa Contador de Calorias
+   Calcula o total de calorias com base nas escolhas do usuário de prato principal e bebida. */
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <windows.h>
 
 int main()
 {
-    /* Variable declaration */
+    system("cls");
+    SetConsoleOutputCP(65001);
+
+    /* Declaração de variáveis */
     int option;
     float totalCalories = 0;
-    system("cls");
 
-    /* Main dish selection */
+    /* Seleção do prato principal */
     printf("\n  Cardápio");
     printf("\n============");
     printf("\n  Prato");
-    printf("\n[1] Italiano - 750cal \n[2] Japones - 324cal \n[3] Salvadorenho - 545cal \n[4] Sem prato \n[5] Sair");
-    printf("\nEscolha uma opcao: ");
+    printf("\n[1] Italiano - 750cal \n[2] Japonês - 324cal \n[3] Salvadorenho - 545cal \n[4] Sem prato \n[5] Sair");
+    printf("\nEscolha uma opção: ");
     scanf("%i", &option);
 
-    /* Calculate calories for main dish */
+    /* Calcular calorias do prato */
     switch (option)
     {
         case 1:
@@ -32,27 +35,27 @@ int main()
             totalCalories += 545;
             break;
         case 4:
-            printf("Proximo!");
+            printf("Próximo!");
             break;
         case 5:
-            printf("Obrigado pela atencao!");
+            printf("Obrigado pela atenção!");
             exit(EXIT_SUCCESS);
         default:
-            printf("Erro! Opcao invalida");
+            printf("Erro! Opção inválida");
             exit(EXIT_SUCCESS);
     }
 
     system("cls");
 
-    /* Drink selection */
+    /* Seleção da bebida */
     printf("\n  Cardápio");
     printf("\n============");
     printf("\n  Bebida");
-    printf("\n[1] Cha - 30cal \n[2] Suco de Laranja - 80cal \n[3] Refrigerante - 90cal \n[4] Sem bebida \n[5] Sair");
-    printf("\nEscolha uma opcao: ");
+    printf("\n[1] Chá - 30cal \n[2] Suco de Laranja - 80cal \n[3] Refrigerante - 90cal \n[4] Sem bebida \n[5] Sair");
+    printf("\nEscolha uma opção: ");
     scanf("%i", &option);
 
-    /* Calculate calories for drink */
+    /* Calcular calorias da bebida */
     switch (option)
     {
         case 1:
@@ -65,19 +68,19 @@ int main()
             totalCalories += 90;
             break;
         case 4:
-            /* No calories added */
+            /* Nenhuma caloria adicionada */
             break;
         case 5:
-            printf("Obrigado pela atencao!");
+            printf("Obrigado pela atenção!");
             exit(EXIT_SUCCESS);
         default:
-            printf("Erro! Opcao invalida");
+            printf("Erro! Opção inválida");
             exit(EXIT_SUCCESS);
     }
 
-    //output
-    printf("\nO total de calorias e: %.2f \n", totalCalories);
-    printf("Obrigado pela atencao!");
+    // Saída
+    printf("\nO total de calorias é: %.2f \n", totalCalories);
+    printf("Obrigado pela atenção!");
 
     return 0;
 }

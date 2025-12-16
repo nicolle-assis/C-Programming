@@ -3,14 +3,11 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include <locale.h>
 #include <windows.h>
 
 int main() 
 {
-    UINT CPAGE_UTF8 = 65001;
-    UINT CPAGE_DEFAULT = GetConsoleOutputCP();
-    SetConsoleOutputCP(CPAGE_UTF8);
+    SetConsoleOutputCP(65001);
     system("cls");
 
     //variables
@@ -45,6 +42,5 @@ int main()
     else
         printf("\nA palavra não foi encontrada.");
 
-    SetConsoleOutputCP(CPAGE_DEFAULT);
     return 0;
 }

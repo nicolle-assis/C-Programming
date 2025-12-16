@@ -6,9 +6,7 @@
 
 int main()
 {
-    UINT CPAGE_UTF8 = 65001;
-    UINT CPAGE_DEFAULT = GetConsoleOutputCP();
-    SetConsoleOutputCP(CPAGE_UTF8);
+    SetConsoleOutputCP(65001);
 
     //variables
     int base, exponent, sum;
@@ -31,6 +29,5 @@ int main()
     printf("\nResultado da exponenciação: %.0lf", powerResult);
     printf("\n==============================");
 
-    SetConsoleOutputCP(CPAGE_DEFAULT);
     return 0;
 }

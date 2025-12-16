@@ -3,14 +3,11 @@
 
 #include <stdio.h>
 #include <windows.h>
-#include <locale.h>
 #include <stdlib.h>
 
 int main()
 {
-    UINT CPAGE_UTF8 = 65001;
-    UINT CPAGE_DEFAULT = GetConsoleOutputCP();
-    SetConsoleOutputCP(CPAGE_UTF8);
+    SetConsoleOutputCP(65001);
 
     /* Variable declaration */
     int month;
@@ -48,6 +45,5 @@ int main()
     else
         printf("Número inválido! Informe um valor entre 1 e 12.");
 
-    SetConsoleOutputCP(CPAGE_DEFAULT);
     return 0;
 }

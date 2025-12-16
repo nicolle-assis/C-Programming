@@ -1,16 +1,17 @@
 #include <stdio.h>
+#include <windows.h>
 #include <stdlib.h>
 
 int main ()
 {
     system("cls");
-
+    SetConsoleOutput(65001);
     int i, n, first_sequence, second_sequence, current_value;
 
     first_sequence = 1;
     second_sequence = 0;
 
-    printf("Quantos termos da sequencia deseja ver? ");
+    printf("Quantos termos da sequência deseja ver? ");
     scanf("%d", &n);
 
     printf("%d ", second_sequence);
