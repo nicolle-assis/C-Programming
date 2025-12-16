@@ -1,28 +1,22 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
-int main()
-{
+int main() {
     system("cls");
+    char nome[50];
+    int idade;
 
-    char s[20];
+    printf("Digite sua idade: ");
+    scanf("%d", &idade);
+    getchar(); // consome o '\n' deixado pelo scanf
 
-    printf("Digite algo (leitura pelo gets): \n");
-    gets(s);
-    fflush(stdin);  
+    printf("Digite seu nome: ");
+    fgets(nome, sizeof(nome), stdin);
+    // Remove o '\n' do final, se existir
+    nome[strcspn(nome, "\n")] = '\0';
 
-    puts("\nResultado: ");
-    puts(s);
-    puts(" ");
-
-    printf("Digite algo (leitura pelo fgets): \n");
-    fgets(s, 20, stdin);
-    fflush(stdin);
-
-    puts("\nResultado: ");
-    puts(s);
-
-
+    printf("\nIdade: %d\nNome: %s\n", idade, nome);
 
     return 0;
 }
