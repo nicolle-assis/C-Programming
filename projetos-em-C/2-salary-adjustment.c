@@ -46,6 +46,10 @@ int main()
     {
         printf("Erro! Código inválido!");
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> project
     return 0;
 }

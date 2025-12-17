@@ -65,10 +65,3 @@ Recebe 10 palavras e permite buscar uma delas usando comparação de strings. Re
 
 **Description (EN):**
 Receives 10 words and allows the user to search for one of them using string comparison. Returns the position where the word was found or a message if it does not exist.
-
-**Conceitos usados / Concepts used:**
-
-* Vetor de strings
-* `strcmp()`
-* Loop com condição de parada
-* Manipulação básica de strings

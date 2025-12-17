@@ -4,7 +4,7 @@
 
 int main() {
     system("cls");
-    char nome[50];
+    char nome[50], answer;
     int idade;
 
     printf("Digite sua idade: ");
