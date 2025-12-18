@@ -21,8 +21,7 @@ Este repositório faz parte da minha jornada de aprendizado em **Tecnologia da I
 
 - **Linguagem:** C  
 - **Compilador:** GCC (via terminal ou Code::Blocks / VSCode)  
-- **Sistema Operacional:** Windows  
-- **Bibliotecas usadas:** `stdio.h`, `stdlib.h`, `math.h`, `locale.h`, entre outras.
+- **Sistema Operacional:** Windows
 
 ---
 
