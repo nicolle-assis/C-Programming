@@ -44,19 +44,6 @@ Manipulação de strings (arrays de caracteres).
 * Algoritmos de ordenação e busca
 * Uso de estruturas (`struct`) para organização de dados
 
-### 🚀 Compilação e Execução
-
-```bash
-gcc nome_do_arquivo.c -o executavel
-./executavel
-```
-
-Exemplo:
-
-```bash
-gcc 2-bubble-sort-vector.c -o bubble_sort
-./bubble_sort
-```
 
 ---
 
