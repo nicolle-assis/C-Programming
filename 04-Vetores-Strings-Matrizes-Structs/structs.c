@@ -41,9 +41,10 @@ int main()
     scanf("%d", &pes.idade);
     printf("Insira um número real:\n");
     scanf("%f", &pes.peso);
-    fflush(stdin);
+    getchar();
     printf("Insira uma palavra:\n");
-    scanf("%s", pes.nome);
+    fgets(pes.nome, TAM, stdin);
+    pes.nome[strcspn(pes.nome, "\n")] = '\0';
 
     printf("\nAlterando com dados do usuário:\n");
     printf("pes.idade: %d\n", pes.idade);
