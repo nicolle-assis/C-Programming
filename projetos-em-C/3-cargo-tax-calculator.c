@@ -1,77 +1,88 @@
-/* Cargo Price and Tax Calculator
-   Reads cargo weight and codes, calculates total price including tax. */
-
 #include <stdio.h>
-#include <windows.h>
 #include <stdlib.h>
 
-int main()
-{
-    SetConsoleOutputCP(65001);
+typedef struct {
+    int code;
+    float taxRate;
+} Country;
 
-    /* Variable declaration */
+typedef struct {
+    int code;
+    float pricePerKg;
+} Cargo;
+
+int main() {
+    Country countries[] = {
+        {1, 0.20},
+        {2, 0.15},
+        {3, 0.10},
+        {4, 0.05}
+    };
+
+    Cargo cargos[] = {
+        {1, 180},
+        {2, 120},
+        {3, 230}
+    };
+
     int countryCode, weightCode;
     float cargoTon, cargoKg, price, totalPrice, tax;
-    system("cls");
+    int i, found = 0;
 
-    /* Data input - Tax table by state */
     printf("\nTabela de Imposto por Estado");
     printf("\n------------------------------");
-    printf("\n[1] - 20%%");
-    printf("\n[2] - 15%%");
-    printf("\n[3] - 10%%");
-    printf("\n[4] - 5%%");
-    printf("\nInforme o código: ");
+    for (i = 0; i < 4; i++) {
+        printf("\n[%d] - %.0f%%", countries[i].code, countries[i].taxRate * 100);
+    }
+    printf("\nInforme o codigo: ");
     scanf("%d", &countryCode);
 
-    /* Data input - Cargo weight in tons */
     printf("\nInforme o peso da carga em toneladas: ");
     scanf("%f", &cargoTon);
 
-    /* Data input - Price per kilo table */
-    printf("\nTabela de preço por quilo (código da carga):");
-    printf("\n[1] - 10 a 20 = 180");
-    printf("\n[2] - 21 a 30 = 120");
-    printf("\n[3] - 31 a 40 = 230");
-    printf("\nInforme o código: ");
+    printf("\nTabela de preco por quilo (codigo da carga):");
+    for (i = 0; i < 3; i++) {
+        printf("\n[%d] - R$ %.2f", cargos[i].code, cargos[i].pricePerKg);
+    }
+    printf("\nInforme o codigo: ");
     scanf("%d", &weightCode);
 
-    /* Calculations */
-    cargoKg = cargoTon * 1000; // Convert tons to kilograms
+    cargoKg = cargoTon * 1000; // converter toneladas em kg
 
-    /* Determine price per kilo */
-    if (weightCode >= 10 && weightCode <= 20)
-        price = cargoKg * 180;
-    else if (weightCode >= 21 && weightCode <= 30)
-        price = cargoKg * 120;
-    else if (weightCode >= 31 && weightCode <= 40)
-        price = cargoKg * 230;
-    else
-    {
-        printf("\nErro! Código de peso inválido!");
-        return 1; // Exit if invalid code
+    // procurar cargo
+    found = 0;
+    for (i = 0; i < 3; i++) {
+        if (cargos[i].code == weightCode) {
+            price = cargoKg * cargos[i].pricePerKg;
+            found = 1;
+            break;
+        }
+    }
+    if (!found) {
+        printf("\nErro! Codigo de carga invalido!");
+        return 1;
     }
 
-    /* Determine tax based on country code */
-    switch (countryCode)
-    {
-        case 1: tax = price * 0.20; break;
-        case 2: tax = price * 0.15; break;
-        case 3: tax = price * 0.10; break;
-        case 4: tax = price * 0.05; break;
-        default:
-            printf("\nErro! Código do estado inválido!");
-            return 1; // Exit if invalid code
+    // procurar pais
+    found = 0;
+    for (i = 0; i < 4; i++) {
+        if (countries[i].code == countryCode) {
+            tax = price * countries[i].taxRate;
+            found = 1;
+            break;
+        }
+    }
+    if (!found) {
+        printf("\nErro! Codigo de estado invalido!");
+        return 1;
     }
 
-    /* Total price */
     totalPrice = price + tax;
 
-    /* Output results */
     printf("\nPeso em quilos: %.2f", cargoKg);
-    printf("\nPreço da carga: R$ %.2f", price);
+    printf("\nPreco da carga: R$ %.2f", price);
     printf("\nValor do Imposto: R$ %.2f", tax);
-    printf("\nValor Total: R$ %.2f", totalPrice);
+    printf("\nValor Total: R$ %.2f\n", totalPrice);
 
     return 0;
 }

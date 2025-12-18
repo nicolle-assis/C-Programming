@@ -1,115 +1,63 @@
-/* Basic Calculator Program
-   Performs addition, subtraction, multiplication, or division based on user choice. */
-
 #include <stdio.h>
-#include <windows.h>
 #include <stdlib.h>
 
-int main()
-{
-    SetConsoleOutputCP(65001); 
+typedef struct {
+    int x;
+    int y;
+    int choice;
+    double result;
+} Operation;
 
-    /* Variable declaration */
-    int x, y, choice;
-    float result;
+int main() {
+    Operation op;
     char answer;
 
-    do{
-        system("cls");
-        printf("\nEquação\n");
-        printf("[1] - Adição\n");
-        printf("[2] - Subtração\n");
-        printf("[3] - Multiplicação\n");
-        printf("[4] - Divisão\n");
-        printf("Selecione uma equação: ");
-        scanf("%d", &choice);
+    const char *operations[] = {"Adicao", "Subtracao", "Multiplicacao", "Divisao"};
 
-        /* Data input */
+    do {
+        printf("\n=== Calculadora Basica ===\n");
+        printf("[1] - Adicao\n");
+        printf("[2] - Subtracao\n");
+        printf("[3] - Multiplicacao\n");
+        printf("[4] - Divisao\n");
+        printf("Selecione uma opcao: ");
+        scanf("%d", &op.choice);
+
         printf("\nInforme o valor de X: ");
-        scanf("%d", &x);
+        scanf("%d", &op.x);
         printf("Informe o valor de Y: ");
-        scanf("%d", &y);
+        scanf("%d", &op.y);
 
-        /* Perform calculation based on user choice */
-        switch (choice)
-        {
-            case 1: 
-                result = x + y;
-                printf("Soma: %.2f", result);
+        switch (op.choice) {
+            case 1:
+                op.result = op.x + op.y;
+                printf("%s: %.2f\n", operations[op.choice - 1], op.result);
                 break;
             case 2:
-                result = x - y;
-                printf("Subtração: %.2f", result);
+                op.result = op.x - op.y;
+                printf("%s: %.2f\n", operations[op.choice - 1], op.result);
                 break;
             case 3:
-                result = x * y;
-                printf("Multiplicação: %.2f", result);
+                op.result = op.x * op.y;
+                printf("%s: %.2f\n", operations[op.choice - 1], op.result);
                 break;
             case 4:
-                if (y != 0)  // Avoid division by zero
-                {
-                    result = (float)x / y;
-                    printf("Divisão: %.2f", result);
-                }
-                else
-                {
-                    printf("Erro! Divisão por zero.");
+                if (op.y == 0) {
+                    printf("Erro! Divisao por zero.\n");
+                } else {
+                    op.result = (double)op.x / op.y;
+                    printf("%s: %.2f\n", operations[op.choice - 1], op.result);
                 }
                 break;
             default:
-                printf("Erro! Código inválido.");
+                printf("Erro! Codigo invalido.\n");
                 break;
         }
-        printf("\nQuer fazer uma nova equação? [s/n]: ");
+
+        printf("\nQuer fazer uma nova equacao? [s/n]: ");
         scanf(" %c", &answer);
-    } while  (answer == 's');
 
-    system("cls");
-
-    /* Data input */
-    printf("Informe o valor de X: ");
-    scanf("%d", &x);
-    printf("Informe o valor de Y: ");
-    scanf("%d", &y);
-
-    printf("\nEquação\n");
-    printf("[1] - Adição\n");
-    printf("[2] - Subtração\n");
-    printf("[3] - Multiplicação\n");
-    printf("[4] - Divisão\n");
-    printf("Selecione uma equação: ");
-    scanf("%d", &choice);
-
-    /* Perform calculation based on user choice */
-    switch (choice)
-    {
-        case 1: 
-            result = x + y;
-            printf("Soma: %.2f", result);
-            break;
-        case 2:
-            result = x - y;
-            printf("Subtração: %.2f", result);
-            break;
-        case 3:
-            result = x * y;
-            printf("Multiplicação: %.2f", result);
-            break;
-        case 4:
-            if (y != 0)  // Avoid division by zero
-            {
-                result = (float)x / y;
-                printf("Divisão: %.2f", result);
-            }
-            else
-            {
-                printf("Erro! Divisão por zero.");
-            }
-            break;
-        default:
-            printf("Erro! Código inválido.");
-            break;
-    }
+    } while (answer == 's' || answer == 'S');
 
     return 0;
 }
